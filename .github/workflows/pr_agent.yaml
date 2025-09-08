@@ -16,7 +16,8 @@ jobs:
       - name: PR Agent action step
         id: pragent
         # use this version if the Docker image action continues to be updated.
-        uses: docker://codiumai/pr-agent:0.29-github_action
+        #uses: docker://codiumai/pr-agent:0.29-github_action
+        uses: Codium-ai/pr-agent@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # If you want to know whole configuration options, please refer to the link below.
