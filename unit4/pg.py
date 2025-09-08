@@ -250,6 +250,7 @@ def record_video(env, policy, out_directory, fps=30):
         )  # We directly put next_state = state for recording logic
         img = env.render()
         images.append(img)
+    [print(img.shape) for i, img in enumerate(images)]
     imageio.mimsave(
         out_directory, [np.array(img) for i, img in enumerate(images)], fps=fps
     )
