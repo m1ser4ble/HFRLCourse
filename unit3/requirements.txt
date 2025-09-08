@@ -1,0 +1,13 @@
+pygame
+numpy
+opencv-python
+gymnasium[atari,accept-rom-license,other]
+huggingface_hub
+#pickle
+#pyyaml==6.0
+imageio
+imageio_ffmpeg
+pyglet==1.5.1
+tqdm
+git+https://github.com/DLR-RM/rl-baselines3-zoo
+
