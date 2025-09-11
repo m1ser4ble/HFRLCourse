@@ -1,0 +1,4 @@
+cd ml-agents
+uv pip install -e ./ml-agents 
+uv pip install -e ./ml-agents-envs 
+
