@@ -1,0 +1,10 @@
+[project]
+name = "a2c"
+version = "0.1.0"
+dependencies = [
+'stable-baselines3[extra]',
+'gymnasium',
+'huggingface_sb3',
+'huggingface_hub',
+'panda_gym',
+]
