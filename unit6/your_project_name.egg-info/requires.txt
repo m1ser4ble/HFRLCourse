@@ -1,0 +1,5 @@
+stable-baselines3[extra]
+gymnasium
+huggingface_sb3
+huggingface_hub
+panda_gym

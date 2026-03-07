@@ -1,6 +1,38 @@
-env_id = "Pixelcopter-PLE-v0"
-env = gym.make(env_id)
-eval_env = gym.make(env_id)
+from torch import nn
+from torch.nn import functional as F
+from torch.distributions import Categorical
+import torch.optim as optim
+import gymnasium as gym
+import torch
+from common import reinforce, push_to_hub
+
+
+from ple import PLE
+from ple.games.pixelcopter import Pixelcopter
+import numpy as np
+
+
+# Create the environment
+def create_pixelcopter_env():
+    game = Pixelcopter()
+    env = PLE(
+        game,
+        fps=30,
+    )  # Set display=False for headless
+    breakpoint()
+    return env
+
+
+# Initialize environment
+env = create_pixelcopter_env()
+env.init()
+
+
+device = torch.device("mps")
+
+# env_id = "Pixelcopter-PLE-v0"
+# env = gym.make(env_id)
+# eval_env = gym.make(env_id)
 s_size = env.observation_space.shape[0]
 a_size = env.action_space.n
 
@@ -60,6 +92,7 @@ pixelcopter_optimizer = optim.Adam(
 )
 
 scores = reinforce(
+    env,
     pixelcopter_policy,
     pixelcopter_optimizer,
     pixelcopter_hyperparameters["n_training_episodes"],

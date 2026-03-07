@@ -1,4 +1,9 @@
 #gym
-gymnasium
+#gymnasium
+gymnasium[classic-control]
 #gym-games
 huggingface_hub
+numpy
+matplotlib
+torch
+imageio

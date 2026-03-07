@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: your-project-name
+Version: 0.1.0
+Requires-Dist: stable-baselines3[extra]
+Requires-Dist: gymnasium
+Requires-Dist: huggingface_sb3
+Requires-Dist: huggingface_hub
+Requires-Dist: panda_gym

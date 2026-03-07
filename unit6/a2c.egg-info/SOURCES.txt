@@ -1,0 +1,7 @@
+a2c.py
+pyproject.toml
+a2c.egg-info/PKG-INFO
+a2c.egg-info/SOURCES.txt
+a2c.egg-info/dependency_links.txt
+a2c.egg-info/requires.txt
+a2c.egg-info/top_level.txt
